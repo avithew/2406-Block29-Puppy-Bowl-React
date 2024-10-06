@@ -19,3 +19,14 @@ export async function getSinglePuppy(id) {
     console.log("Error fetching puppy: ", error);
   }
 }
+
+export async function deletePuppy(id) {
+  try {
+    response = fetch(`${API_URL}/players/${id}`, {
+      method: "DELETE",
+    });
+    console.log("deleted id ", id);
+  } catch (error) {
+    console.log("Error deleting puppy: ", error);
+  }
+}

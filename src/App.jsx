@@ -5,6 +5,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import SinglePlayer from "./components/SinglePlayer";
 import PlayerList from "./components/PlayerList";
 import { getAllPuppies } from "./apiRequest";
+import { deletePuppy } from "./apiRequest";
 
 function App() {
   const dummyArray = [
@@ -17,6 +18,7 @@ function App() {
     async function getPuppies() {
       const data = await getAllPuppies();
       setPuppies(data);
+      deletePuppy(14989);
     }
     getPuppies();
   }, []);
