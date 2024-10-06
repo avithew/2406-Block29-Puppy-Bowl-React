@@ -20,12 +20,27 @@ export async function getSinglePuppy(id) {
   }
 }
 
+export async function addPuppy(puppy) {
+  try {
+    const response = await fetch(`${API_URL}/players`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(puppy),
+    });
+    const data = await response.json();
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.log("Error adding puppy: ", error);
+  }
+}
+
 export async function deletePuppy(id) {
   try {
-    response = fetch(`${API_URL}/players/${id}`, {
+    const response = fetch(`${API_URL}/players/${id}`, {
       method: "DELETE",
     });
-    console.log("deleted id ", id);
+    return response;
   } catch (error) {
     console.log("Error deleting puppy: ", error);
   }
