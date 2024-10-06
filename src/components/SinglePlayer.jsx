@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+import { getSinglePuppy } from "../apiRequest";
 
 function SinglePlayer({ puppies, setPuppies }) {
-  const puppy = puppies.filter((element) => {
-    return element.name === useParams().name;
-  })[0];
-  if (puppy === undefined) {
+  const [puppy, setPuppy] = useState(null);
+  const id = useParams().id;
+  useEffect(() => {
+    const getPuppy = async () => {
+      const data = await getSinglePuppy(id);
+      setPuppy(data);
+    };
+    getPuppy();
+  }, []);
+  if (!puppy) {
     return (
       <div>
         <h1>Puppy not found</h1>

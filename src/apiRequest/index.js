@@ -9,3 +9,13 @@ export async function getAllPuppies() {
     console.log("Error fetching puppies: ", error);
   }
 }
+
+export async function getSinglePuppy(id) {
+  try {
+    const response = await fetch(`${API_URL}/players/${id}`);
+    const data = await response.json();
+    return data.data.player;
+  } catch (error) {
+    console.log("Error fetching puppy: ", error);
+  }
+}

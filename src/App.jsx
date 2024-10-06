@@ -8,8 +8,8 @@ import { getAllPuppies } from "./apiRequest";
 
 function App() {
   const dummyArray = [
-    { name: "Salamander", breed: "Lizard" },
-    { name: "Ezekiel", breed: "Husky" },
+    { id: "123", name: "Salamander", breed: "Lizard" },
+    { id: "432", name: "Ezekiel", breed: "Husky" },
   ];
   const [puppies, setPuppies] = useState(dummyArray);
 
@@ -29,7 +29,7 @@ function App() {
           element={<PlayerList puppies={puppies} setPuppies={setPuppies} />}
         />
         <Route
-          path="/puppy/:name"
+          path="/puppy/:id"
           element={<SinglePlayer puppies={puppies} setPuppies={setPuppies} />}
         />
       </Routes>
