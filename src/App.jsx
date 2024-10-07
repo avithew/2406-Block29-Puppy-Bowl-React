@@ -3,7 +3,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import SinglePlayer from "./components/SinglePlayer";
 import PlayerList from "./components/PlayerList";
 import { getAllPuppies } from "./apiRequest";
-import { addPuppy } from "./apiRequest";
 
 function App() {
   const dummyArray = [
