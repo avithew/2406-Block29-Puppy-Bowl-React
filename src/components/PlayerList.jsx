@@ -4,7 +4,7 @@ import PlayerCard from "./helper-components/PlayerCard";
 function PlayerList({ puppies, setPuppies }) {
   return (
     <div>
-      <AddNewPlayerForm />
+      <AddNewPlayerForm setPuppies={setPuppies} />
       {puppies.map((element) => {
         return (
           <PlayerCard
