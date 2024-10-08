@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { addPuppy } from "../../apiRequest";
+import "./AddNewPlayerForm.css";
 
 function AddNewPlayerForm({ setPuppies }) {
   const [name, setName] = useState("");

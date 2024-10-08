@@ -1,0 +1,13 @@
+.playerCard {
+  margin: 20px;
+  padding: 10px;
+  height: 450px;
+  width: 300px;
+  background-color: aquamarine;
+  border-radius: 33px;
+}
+
+.playerCard img {
+  height: 200px;
+  width: 150px;
+}

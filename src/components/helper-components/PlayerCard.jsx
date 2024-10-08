@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { deletePuppy } from "../../apiRequest";
+import "./PlayerCard.css";
 
 function PlayerCard({ puppy, setPuppies }) {
   const nav = useNavigate();
