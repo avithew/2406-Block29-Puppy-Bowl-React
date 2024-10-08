@@ -1,9 +1,18 @@
 import { useNavigate } from "react-router-dom";
+import { deletePuppy } from "../../apiRequest";
 
-function PlayerCard({ puppy }) {
+function PlayerCard({ puppy, setPuppies }) {
   const nav = useNavigate();
-  function handleClick() {
+  function seeDetails() {
     nav(`puppy/${puppy.id}`);
+  }
+  function delPuppy() {
+    deletePuppy(puppy.id);
+    setPuppies((prevState) => {
+      return prevState.filter((element) => {
+        return element.id != puppy.id;
+      });
+    });
   }
   return (
     <div className="playerCard">
@@ -11,7 +20,8 @@ function PlayerCard({ puppy }) {
       <img src={puppy.imageUrl} alt="" />
       <p>Breed: {puppy.breed}</p>
       <p>Status: {puppy.status}</p>
-      <button onClick={handleClick}>See Details</button>
+      <button onClick={seeDetails}>See Details</button>
+      <button onClick={delPuppy}>Delete</button>
     </div>
   );
 }
