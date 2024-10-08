@@ -6,13 +6,7 @@ function PlayerList({ puppies, setPuppies }) {
     <div>
       <AddNewPlayerForm setPuppies={setPuppies} />
       {puppies.map((element) => {
-        return (
-          <PlayerCard
-            key={element.name}
-            name={element.name}
-            breed={element.breed}
-          />
-        );
+        return <PlayerCard puppy={element} />;
       })}
     </div>
   );
