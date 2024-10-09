@@ -1,3 +1,9 @@
 body {
-  background-color: black;
+  background-color: rgb(0, 3, 91);
+}
+
+button {
+  background-color: rgb(189, 0, 0);
+  color: whitesmoke;
+  border-radius: 5px;
 }
