@@ -29,12 +29,14 @@ function SinglePlayer({ puppies, setPuppies }) {
     );
   } else {
     return (
-      <div className="singlePlayer">
-        <h1>Single player page for {puppy.name}</h1>
-        <img src={puppy.imageUrl} alt="" />
-        <p>Breed: {puppy.breed}</p>
-        <p>Status: {puppy.status}</p>
-        <button onClick={handleClick}>Go Back</button>
+      <div className="singleplayer-container">
+        <div className="singlePlayer">
+          <h1>Single player page for {puppy.name}</h1>
+          <img src={puppy.imageUrl} alt="" />
+          <p>Breed: {puppy.breed}</p>
+          <p>Status: {puppy.status}</p>
+          <button onClick={handleClick}>Go Back</button>
+        </div>
       </div>
     );
   }

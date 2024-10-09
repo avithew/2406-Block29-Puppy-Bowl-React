@@ -20,42 +20,44 @@ function AddNewPlayerForm({ setPuppies }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Add Puppy</h1>
-      <div className="form-group">
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          placeholder="Enter Name"
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="breed">Breed:</label>
-        <input
-          type="text"
-          value={breed}
-          placeholder="Enter Breed"
-          onChange={(event) => setBreed(event.target.value)}
-          required
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="imageUrl">ImageUrl:</label>
-        <input
-          type="text"
-          value={imageUrl}
-          placeholder="Enter ImageUrl"
-          onChange={(event) => setImageUrl(event.target.value)}
-          required
-        />
-      </div>
-      <button type="submit" className="submit-btn">
-        Add Puppy
-      </button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <h1>Add Puppy</h1>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Enter Name"
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="breed">Breed:</label>
+          <input
+            type="text"
+            value={breed}
+            placeholder="Enter Breed"
+            onChange={(event) => setBreed(event.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="imageUrl">ImageUrl:</label>
+          <input
+            type="text"
+            value={imageUrl}
+            placeholder="Enter ImageUrl"
+            onChange={(event) => setImageUrl(event.target.value)}
+            required
+          />
+        </div>
+        <button type="submit" className="submit-btn">
+          Add Puppy
+        </button>
+      </form>
+    </div>
   );
 }
 

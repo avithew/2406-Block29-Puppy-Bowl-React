@@ -1,3 +1,19 @@
 .singlePlayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: bisque;
+  width: 700px;
+}
+
+.singlePlayer img {
+  height: 500px;
+  width: 350px;
+}
+
+.singleplayer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

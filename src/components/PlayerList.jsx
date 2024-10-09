@@ -5,7 +5,9 @@ import "./PlayerList.css";
 function PlayerList({ puppies, setPuppies }) {
   return (
     <div>
-      <AddNewPlayerForm setPuppies={setPuppies} />
+      <div className="form-container">
+        <AddNewPlayerForm setPuppies={setPuppies} />
+      </div>
       <div className="card-container">
         {puppies.map((element) => {
           return (

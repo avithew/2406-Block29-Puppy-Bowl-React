@@ -1,4 +1,8 @@
 .playerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   margin: 20px;
   padding: 10px;
   height: 450px;
